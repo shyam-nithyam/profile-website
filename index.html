@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-KNtdtM+vGuMsnJpWZ02p7yEPq0AEpRp4GdZbVYEXx8emQZBpnVnYw2wJzvQY4RnHr8s5RxAqbmV1bJx2Erb4Tg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <!-- Banner Section -->
+<section class="banner">
+  <div class="banner-text">
+    <h1>Shyam Nithyanandham</h1>
+    <p>Test Automation Architect | RPA | Problem Solver</p>
+
+    <div class="banner-icons">
+      <a href="www.linkedin.com/in/shyam-chander-nithyanandham-126389166" target="_blank">
+       <i class="fa-brands fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+
+  <img src=".\images\My Photo.jpeg" alt="Profile Photo" class="banner-photo">
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+</section>
+
+  <!-- Main container -->
+  <div class="container">
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <ul>
+        <li><a href="profile.html" target="contentFrame" onclick="toggleMenu()">Profile</a></li>
+		<li><a href="skills.html" target="contentFrame" onclick="toggleMenu()">Skills & Certifications</a></li>
+        <li><a href="projects.html" target="contentFrame" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="contact.html" target="contentFrame" onclick="toggleMenu()">Contact</a></li>		
+      </ul>
+    </nav>
+
+    <!-- Content -->
+    <iframe name="contentFrame" src="profile.html" class="content"></iframe>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

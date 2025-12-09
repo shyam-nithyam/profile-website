@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+<style>
+  :root{
+    --accent:#4cc9f0;
+    --text:#000;
+    --muted:#555;
+    --card:#ffffff;
+    --shadow:0 4px 14px rgba(0,0,0,.12);
+  }
+  html,body{
+    margin:0;
+    padding:0;
+    background:#fff;
+    color:var(--text);
+    font-family:Arial,Helvetica,sans-serif;
+  }
+  .page{
+    padding:40px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+  }
+  h1{
+    text-align:center;
+    margin-bottom:10px;
+  }
+  .subtitle{
+    color:var(--muted);
+    text-align:center;
+    margin-bottom:30px;
+  }
+
+  /* Card Layout */
+  .contact-card{
+    background:var(--card);
+    border-left:6px solid var(--accent);
+    box-shadow:var(--shadow);
+    border-radius:16px;
+    padding:30px;
+    max-width:640px;
+    width:100%;
+  }
+
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+  }
+
+  .contact-item{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+  }
+
+  .contact-item i{
+    color:var(--accent);
+    font-size:22px;
+    margin-top:4px;
+  }
+
+  .contact-item div{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .contact-item span{
+    font-weight:bold;
+    font-size:15px;
+    color:#000;
+  }
+
+  .contact-item a, .contact-item p{
+    margin:2px 0 0;
+    color:var(--muted);
+    text-decoration:none;
+  }
+
+  .contact-item a:hover{
+    color:var(--accent);
+  }
+
+  /* Message Form */
+  form{
+    margin-top:30px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  input, textarea{
+    width:100%;
+    padding:12px 14px;
+    border:1px solid #e0e7ef;
+    border-radius:10px;
+    font-size:14px;
+    font-family:inherit;
+  }
+
+  input:focus, textarea:focus{
+    border-color:var(--accent);
+    outline:none;
+    box-shadow:0 0 0 3px rgba(76,201,240,.2);
+  }
+
+  button{
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    padding:12px 18px;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:background .3s;
+    align-self:flex-start;
+  }
+
+  button:hover{
+    background:#3ab7e0;
+  }
+
+  @media(max-width:600px){
+    .contact-grid{
+      grid-template-columns:1fr;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <h1>Contact Me</h1>
+    <p class="subtitle">Feel free to reach out — I’d love to connect!</p>
+
+    <div class="contact-card">
+      <div class="contact-grid">
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <span>Email</span>
+            <a href="mailto:shyam.nithyanandham@gmail.com">shyam.nithyanandham@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <span>Phone</span>
+            <p>+44 7424557431</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <span>Location</span>
+            <p>Belfast, United Kingdom</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fa-brands fa-linkedin"></i>
+          <div>
+            <span>LinkedIn</span>
+            <a href="www.linkedin.com/in/shyam-chander-nithyanandham-126389166" target="_blank">linkedin.com/in/shyam-chander-nithyanandham-126389166</a>
+          </div>
+        </div>
+      </div>
+      <form action="https://formspree.io/f/xblqlzje" method="POST">
+		<input type="text" name="name" placeholder="Your Name" required />
+		<input type="email" name="email" placeholder="Your Email" required />
+		<textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+		<button type="submit">Send Message</button>
+	 </form>
+
+    </div>
+  </div>
+</body>
+</html>
