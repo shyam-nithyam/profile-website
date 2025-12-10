@@ -14,7 +14,7 @@ body {
   justify-content: space-between;
   background: linear-gradient(135deg, #2b2d42, #8d99ae);
   color: white;
-  padding: 40px 60px;
+  padding: 20px 80px;
   flex-wrap: wrap;
 }
 
@@ -83,7 +83,7 @@ body {
 /* ====== Layout ====== */
 .container {
   display: flex;
-  height: calc(100vh - 230px); /* banner height subtracted */
+  min-height: 70vh; /* banner height subtracted */
 }
 
 /* Sidebar */
